@@ -1,0 +1,9 @@
+name: 'Workflow Team Notifications'
+description: 'Notifies about the workflow execution results'
+inputs:
+  notify-conclusions:
+    description: 'A list of workflow conclusions (comma separated) that will result in a notification, if not provided, a notification will be sent by default. Can be one of the “success”, “failure”, “neutral”, “cancelled”, “skipped”, “timed_out”, or “action_required”.'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
